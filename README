@@ -1,0 +1,5 @@
+crawls the google suggestions and gives back results.  
+
+example invocation
+
+./gsuggest.pl "mysql is" 
