@@ -1,5 +1,7 @@
 crawls the google suggestions and gives back results.  
 
+Google says that its software makes suggestions based on complex popularity algorithms that are designed to predict the queries you are most likely to want to submit.
+
 example invocation
 
 ./gsuggest.pl "mysql is" 
