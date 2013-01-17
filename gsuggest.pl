@@ -9,7 +9,7 @@ use Data::Dumper;
 
 sub get_gsuggest {
   my $topic = shift;
-  my $gs_url="http://clients1.google.com/complete/search?q=$topic";
+  my $gs_url="https://www.google.com/s?hl=en&q=$topic";
   use LWP::Simple;
   my $gs_raw = get($gs_url) || die ("failed getting $gs_url");
   my $gs_json;
@@ -49,10 +49,8 @@ my $topic = $ARGV[0];
 my $json_str = get_gsuggest ($topic);
 my @suggestions = transform_gsuggest_data ($json_str);
 
-print "Rank\tBody\n";
-print "----\t----\n";
-
 foreach my $i (@suggestions) {
-  print $i->{'rank'},"\t", $i->{'body'},"\n";
+  print $i->{'body'},"\n";
+
 }
 
